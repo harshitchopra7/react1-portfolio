@@ -1,6 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
+import TechStack from "./components/TechStack/TechStack";
 
 // Components to be made
 // 1. Navbar 
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <Navbar />
       <About />
+      <TechStack />
     </div>
   );
 }
