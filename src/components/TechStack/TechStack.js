@@ -6,72 +6,71 @@ import firebase from "../../images/techStack/firebase.png";
 import github from "../../images/techStack/github.png";
 import html from "../../images/techStack/html.png";
 import js from "../../images/techStack/js.png";
+import TechStackIcon from "./TechStackIcon/TechStackIcon";
 
 function TechStack() {
 
     const techstackData = [
         {
-            iconImage: react,
-            iconAltProperty: "reactImage",
-            iconName: 'React'
+          iconImage: react,
+          iconAltProperty: "reactImage",
+          iconName: "React",
         },
         {
-            iconImage: js,
-            iconAltProperty: "jsImage",
-            iconName: 'Javascript'
+          iconImage: js,
+          iconAltProperty: "jsImage",
+          iconName: "Javascript",
         },
         {
-            iconImage: html,
-            iconAltProperty: "htmlImage",
-            iconName: 'HTML'
+          iconImage: html,
+          iconAltProperty: "htmlImage",
+          iconName: "HTML",
         },
-    ]
+      ];
 
-    const techstackData2 = [
-        {
-            iconImage: cpp,
-            iconAltProperty: "cppImage",
-            iconName: 'C++'
-        },
-        {
-            iconImage: firebase,
-            iconAltProperty: "firebaseImage",
-            iconName: 'Firebase'
-        },
-        {
-            iconImage: github,
-            iconAltProperty: "githubImage",
-            iconName: 'Github'
-        },
-    ]
+  const techstackData2 = [
+    {
+      iconImage: cpp,
+      iconAltProperty: "cppImage",
+      iconName: "C++",
+    },
+    {
+      iconImage: firebase,
+      iconAltProperty: "firebaseImage",
+      iconName: "Firebase",
+    },
+    {
+      iconImage: github,
+      iconAltProperty: "githubImage",
+      iconName: "Github",
+    },
+  ];
+
+  function showIcon(value) {
+    return (
+      <div className="techstack_image_element_container">
+        <img src={value.iconImage} alt={value.iconAltProperty} />
+        <p>{value.iconName}</p>
+      </div> 
+    );
+  }
 
   return (
     <div className="techstack_container">
       <p className="techstack_title">Tech Stack</p>
       <div className="techstack_image_rows_container">
-          
         {/* Tech Stack Row 1 */}
         <div className="techstack_image_container_row1">
-
-            {techstackData.map((value, key) => (
-                <div className="techstack_image_element_container">
-                    <img src={value.iconImage} alt={value.iconAltProperty} />
-                    <p>{value.iconName}</p>
-                </div>
-            ))}
-
+          {techstackData.map((value, key) => (
+            <TechStackIcon data={value} />
+          ))}
         </div>
 
         {/* Tech Stack Row 2 (which is exactly same as Row 1 but have different icon name, image  and alt property) */}
         <div className="techstack_image_container_row1">
-
-            {techstackData2.map((value, key) => (
-                <div className="techstack_image_element_container">
-                    <img src={value.iconImage} alt={value.iconAltProperty} />
-                    <p>{value.iconName}</p>
-                </div>
-            ))}
-
+          {techstackData2.map((value, key) => (
+            showIcon(value)
+          ))}
         </div>
       </div>
     </div>
