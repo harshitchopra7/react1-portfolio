@@ -69,7 +69,10 @@ function TechStack() {
         {/* Tech Stack Row 2 (which is exactly same as Row 1 but have different icon name, image  and alt property) */}
         <div className="techstack_image_container_row1">
           {techstackData2.map((value, key) => (
-            showIcon(value)
+            // 1. Make a function and return html from it
+            // showIcon(value)
+            // 2. Create component, pass props to make it work according to out needs
+            <TechStackIcon data={value} />
           ))}
         </div>
       </div>

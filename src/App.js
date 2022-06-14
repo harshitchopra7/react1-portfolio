@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import TechStack from "./components/TechStack/TechStack";
+import Experience from "./components/Experience/Experience";
 
 // Components to be made
 // 1. Navbar 
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <About />
       <TechStack />
+      <Experience />
     </div>
   );
 }
