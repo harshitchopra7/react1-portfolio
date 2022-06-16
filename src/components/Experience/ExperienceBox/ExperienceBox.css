@@ -1,4 +1,28 @@
 .ex_box_container {
-    background-color: red;
     width: 500px;
+    padding: 14px 18px;
+    background-color: #181818;
+    box-shadow: -8px 8px 8px 0 red;
+    margin: 40px;
+}
+.ex_box_title {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+.ex_box_sentences > p {
+    font-size: 18px;
+}
+.ex_box_subtitle {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+.ex_box_images {
+    display: flex;
+    justify-content: center;
+}
+.ex_box_images > img {
+    height: 40px;
+    margin: 0 10px;
 }
